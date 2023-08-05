@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --font: 'Mulish', sans-serif;
+  --primary-color: #b52184;
+  --text-color: #312d64;
+  --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+  --white: #ffffff;
+
+}
+body {
+  font-family:  var(--font);
+  background-color: #f9f4fb;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 3vw + 1.5rem, 6rem);
+  color: var(--primary-color);
+  line-height: 4rem;
+  font-weight: 900;
+  margin: 1.7rem auto .5rem;
+}
+h2 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 4.3rem;
+}
+h3 {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  color: var(--primary-color);
+  font-weight: 900;
+  margin-top: 3.3rem;
+  margin-bottom: 1.9rem;
+}
+p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+button, input, fieldset, textarea {
+  border: none;
+  background: none;
+  font-family: var(--font);
+}
+
+
+/* Hero section */
+#hero {
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  text-align: center;
+}
+#hero .text p{
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+#hero .text .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid var(--primary-color) 4px;
+  border-radius: 76rem;
+  margin: 0 auto;
+  transition: all 300ms;
+
+}
+
+#hero .text .button-down img{
+  width: 3rem;
+}
+#hero .text .button-down:hover {
+  filter: brightness(0.7);
+  transform: scale(1.1);
+}
+
+/* Cards section */
+#cards {
+  background: var(--gradient-background);
+  padding: 5.3rem 3.9rem 5.5rem 3.9rem;
+  display: grid;
+  gap: 4.9rem;
+}
+#cards .card {
+  background: var(--white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+#cards .card img {
+  width: 8rem;
+}
+
+/* Contact Service */
+#contact {
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--text-color);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.4rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+#contact form input {
+  padding-left: 4rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--text-color);
+}
+
+#contact form textarea {
+  height: 12.6rem;
+  resize: none;
+}
+
+#contact form button {
+  background: var(--gradient-background);
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: var(--white);
+  transition: filter 300ms;
+}
+
+#contact form button:hover {
+  filter: brightness(0.9);
+}
+
+#name {
+  background: url(images/person.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+#email {
+  background: url(images/arroba.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+/* footer */
+footer {
+  background: var(--gradient-background);
+  padding: 3.2rem 1.6rem;
+}
+footer p{
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+
+
+/* media */
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 2.4rem;  
+  }
+  #hero {
+    display: flex;
+    align-items: center;
+    /* padding: 0 2.9rem 10.3rem 10.9rem; */
+    max-height: 83.6rem;
+  }
+  #hero .text {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    /* margin-top: 25rem; */
+  }
+  
+  #hero .text p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+  #hero .text .button-down{
+    margin: 0;
+    
+  }
+  #hero .astronauta{
+    order: 2;
+  }
+
+  #cards {
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+  #cards .card {
+    padding: 3.2rem 1.3rem 3.2rem 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    height: 62.2rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+  #contact form {
+    flex: 1;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+    h3 {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 2.4rem;  
+  }
+  #hero {
+    display: flex;
+    align-items: center;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+  #hero .text {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    margin-top: 25rem;
+  }
+  
+  #hero .text p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+  #hero .text .button-down{
+    margin: 0;
+    
+  }
+  #hero .astronauta{
+    order: 2;
+  }
+
+  #cards {
+    grid-template-columns: repeat(3,1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+  #cards .card {
+    padding: 3.2rem 1.3rem 3.2rem 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9.2rem;
+    height: 62.2rem;
+    background: url(./images/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 10.9rem;
+  }
+
+  #contact form {
+    flex: 1; 
+  }
+
+  #contact .stars {
+    flex: 1;
+  }
+}
